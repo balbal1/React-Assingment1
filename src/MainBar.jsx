@@ -2,11 +2,14 @@ import React from 'react'
 import './MainBar.css'
 
 function MainBar(props) {
-
+	
+	// error here
+    let input = document.getElementById("input");
+    let select = document.getElementById("select");
     function addCard() {
         props.cards.push({
-            title: "input.value",
-            tag: "select.value",
+            title: input.value,
+            tag: select.value,
             id: props.counter
         })
         console.log(props.cards);
@@ -15,8 +18,8 @@ function MainBar(props) {
     return (
         <>
             <div className="input-container">
-                <input type="text"/>
-                <select defaultValue="Select a tag">
+                <input type="text" id="input"/>
+                <select defaultValue="Select a tag" id="select">
                     <option disabled hidden>Select a tag</option>
                     <option value="Productivity">Productivity</option>
                     <option value="Learning">Learning</option>
