@@ -2,15 +2,24 @@ import React from 'react'
 import './MainBar.css'
 
 function MainBar(props) {
-	
-	// error here
-    let input = document.getElementById("input");
-    let select = document.getElementById("select");
+
+    let counter = 2;
+
+    let inputValue;
+    function getInputValue(e) {
+        inputValue = e.target.value;
+    }
+
+    let selectValue;
+    function getSelectValue(e) {
+        selectValue = e.target.value;
+    }
+
     function addCard() {
         props.cards.push({
-            title: input.value,
-            tag: select.value,
-            id: props.counter
+            title: inputValue,
+            tag: selectValue,
+            id: counter++
         })
         console.log(props.cards);
     }
@@ -18,8 +27,8 @@ function MainBar(props) {
     return (
         <>
             <div className="input-container">
-                <input type="text" id="input"/>
-                <select defaultValue="Select a tag" id="select">
+                <input onChange={getInputValue} type="text" id="input"/>
+                <select onChange={getSelectValue} defaultValue="Select a tag" id="select">
                     <option disabled hidden>Select a tag</option>
                     <option value="Productivity">Productivity</option>
                     <option value="Learning">Learning</option>
@@ -27,7 +36,7 @@ function MainBar(props) {
                     <option value="Work">Work</option>
                     <option value="Finance">Finance</option>
                 </select>
-                <button className="add-button" onClick={addCard()}>Add</button>
+                <button className="add-button" onClick={addCard}>Add</button>
             </div>
         </>
     )
