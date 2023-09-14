@@ -1,0 +1,28 @@
+.input-container {
+  background-color: lightcoral;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
+}
+
+.input-container input {
+  font-size: 2rem;
+  border-radius: 15px;
+  padding: 0.2em 0.5em;
+  min-width: 100px;
+}
+.input-container button {
+  font-size: 2rem;
+  border-radius: 10px;
+  padding: 0.2em;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}

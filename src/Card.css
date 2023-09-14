@@ -1,0 +1,41 @@
+.card {
+    background-color: lightgoldenrodyellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 250px;
+}
+
+.card-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.8rem;
+    padding: 0.5em;
+}
+
+.card-footer {
+    background-color: rgb(225, 225, 149);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.card-tag {
+    flex-grow: 1;
+    text-align: center;
+    padding: 0.2em;
+}
+
+.delete-card {
+    padding: 0.2em;
+    background-color: lightsalmon;
+    cursor: pointer;
+    user-select: none;
+}
+.delete-card:hover {
+    background-color: lightcoral;
+}
